@@ -28,6 +28,8 @@ public class HomeFragment extends Fragment {
     private EditText inputField;
     private Button submitButton;
 
+    private TextView finishedIndicator;
+
     private Button option1;
     private Button option2;
     private Button option3;
@@ -55,8 +57,9 @@ public class HomeFragment extends Fragment {
         option2 = root.findViewById(R.id.option2);
         option3 = root.findViewById(R.id.option3);
         option4 = root.findViewById(R.id.option4);
+        finishedIndicator = root.findViewById(R.id.finishedIndicator);
 
-
+        progressBar.setMax(questions.length);
 
         displayUI();
 
@@ -111,28 +114,46 @@ public class HomeFragment extends Fragment {
     }
 
     private void displayUI(){
-        maxQuestionNumberText.setText("/" + questions.length);
-        questionText.setText(questions[qCount-1]);
-        questionNumber.setText("Question " + qCount);
 
-        if(qCount != 1 && qCount < questions.length+1){
-            inputField.setVisibility(View.GONE);
-            submitButton.setVisibility(View.GONE);
+        if(qCount <=5 ){
+            progressBar.setProgress((qCount-1));
 
-            option1.setVisibility(View.VISIBLE);
-            option2.setVisibility(View.VISIBLE);
-            option3.setVisibility(View.VISIBLE);
-            option4.setVisibility(View.VISIBLE);
+            maxQuestionNumberText.setText("/" + questions.length);
+            questionText.setText(questions[qCount-1]);
+            questionNumber.setText("Question " + qCount);
 
-            option1.setText(buttonOptions[qCount-1][0]);
-            option2.setText(buttonOptions[qCount-1][1]);
-            option3.setText(buttonOptions[qCount-1][2]);
-            option4.setText(buttonOptions[qCount-1][3]);
+            if(qCount == 1){
+                inputField.setVisibility(View.VISIBLE);
+                submitButton.setVisibility(View.VISIBLE);
+
+                option1.setVisibility(View.GONE);
+                option2.setVisibility(View.GONE);
+                option3.setVisibility(View.GONE);
+                option4.setVisibility(View.GONE);
+            }
+            else{
+                inputField.setVisibility(View.GONE);
+                submitButton.setVisibility(View.GONE);
+
+                option1.setVisibility(View.VISIBLE);
+                option2.setVisibility(View.VISIBLE);
+                option3.setVisibility(View.VISIBLE);
+                option4.setVisibility(View.VISIBLE);
+
+                option1.setText(buttonOptions[qCount-1][0]);
+                option2.setText(buttonOptions[qCount-1][1]);
+                option3.setText(buttonOptions[qCount-1][2]);
+                option4.setText(buttonOptions[qCount-1][3]);
+            }
         }
         else{
-            inputField.setVisibility(View.VISIBLE);
-            submitButton.setVisibility(View.VISIBLE);
+            finishedIndicator.setVisibility(View.VISIBLE);
 
+            questionNumber.setVisibility(View.GONE);
+            maxQuestionNumberText.setVisibility(View.GONE);
+            progressBar.setVisibility(View.GONE);
+            questionText.setVisibility(View.GONE);
+            inputField.setVisibility(View.GONE);
             option1.setVisibility(View.GONE);
             option2.setVisibility(View.GONE);
             option3.setVisibility(View.GONE);
