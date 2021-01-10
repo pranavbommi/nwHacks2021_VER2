@@ -5,16 +5,25 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_home"
+            android:id="@+id/nav_quiz"
             android:icon="@drawable/baseline_assignment_turned_in_black_18dp"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_data"
             android:icon="@drawable/baseline_assessment_black_18dp"
             android:title="@string/menu_gallery" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_diary"
             android:icon="@drawable/baseline_book_black_18dp"
             android:title="@string/menu_slideshow" />
+
+        <item
+            android:id="@+id/nav_suggestions"
+            android:icon="@drawable/light_bulb"
+            android:title="Suggestions" />
+        <item
+            android:id="@+id/nav_contact"
+            android:icon="@drawable/baseline_language_black_18dp"
+            android:title="Contact" />
     </group>
 </menu>
