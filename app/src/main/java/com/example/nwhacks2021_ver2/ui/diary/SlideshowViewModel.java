@@ -1,4 +1,4 @@
-package com.example.nwhacks2021_ver2.ui.slideshow;
+package com.example.nwhacks2021_ver2.ui.diary;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

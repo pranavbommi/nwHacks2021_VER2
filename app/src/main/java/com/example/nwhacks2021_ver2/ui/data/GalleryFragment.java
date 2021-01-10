@@ -1,4 +1,4 @@
-package com.example.nwhacks2021_ver2.ui.gallery;
+package com.example.nwhacks2021_ver2.ui.data;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
