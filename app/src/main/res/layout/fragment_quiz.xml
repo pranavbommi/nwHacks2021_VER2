@@ -10,23 +10,26 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="503dp"
-        android:layout_height="849dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:alpha="0.94"
         android:src="@drawable/teal"
-        tools:layout_editor_absoluteX="-29dp"
-        tools:layout_editor_absoluteY="-72dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ProgressBar
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="406dp"
+        android:layout_width="300dp"
         android:layout_height="32dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:background="#00FFFFFF"
         android:max="10"
-        android:progress="5"
+        android:progress="0"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -87,6 +90,7 @@
         android:padding="15dp"
         android:textColor="#FFFFFF"
         android:textColorHint="#E1E1E1"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="@+id/questionText"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/questionText"
@@ -99,9 +103,58 @@
         android:layout_marginTop="5dp"
         android:layout_marginBottom="30dp"
         android:text="Submit"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/activitiesTextInput"
         app:layout_constraintTop_toBottomOf="@+id/activitiesTextInput"
         app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/option1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Option1"
+        android:visibility="visible"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/submitButton" />
+
+    <Button
+        android:id="@+id/option2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Option2"
+        android:visibility="visible"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/option1" />
+
+    <Button
+        android:id="@+id/option3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Option3"
+        android:visibility="visible"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/option2" />
+
+    <Button
+        android:id="@+id/option4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Option4"
+        android:visibility="visible"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/option3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
