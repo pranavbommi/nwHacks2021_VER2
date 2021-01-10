@@ -1,14 +1,243 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/playView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SuggestionsFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header"
+        android:layout_width="415dp"
+        android:layout_height="138dp"
+        android:background="@color/teal_200"
+        android:gravity="bottom"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-</FrameLayout>
+        <View
+            android:layout_width="321dp"
+            android:layout_height="7dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginLeft="44dp"
+            android:layout_marginTop="70dp"
+            android:background="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.545" />
+
+        <TextView
+            android:id="@+id/headerSuggestionsLabel"
+            android:layout_width="246dp"
+            android:layout_height="46dp"
+            android:text="SUGGESTIONS"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/white"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="84dp"
+            tools:layout_editor_absoluteY="46dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/round"
+        android:layout_width="359dp"
+        android:layout_height="87dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/round_backround"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header" />
+
+    <TextView
+        android:id="@+id/round4"
+        android:layout_width="359dp"
+        android:layout_height="87dp"
+        android:background="@drawable/round_backround"
+        app:layout_constraintBottom_toTopOf="@+id/round5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        app:layout_constraintVertical_bias="0.896" />
+
+    <TextView
+        android:id="@+id/round5"
+        android:layout_width="359dp"
+        android:layout_height="87dp"
+        android:background="@drawable/round_backround"
+        app:layout_constraintBottom_toTopOf="@+id/round6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/round"
+        app:layout_constraintVertical_bias="0.899" />
+
+    <TextView
+        android:id="@+id/round6"
+        android:layout_width="359dp"
+        android:layout_height="87dp"
+        android:background="@drawable/round_backround"
+        app:layout_constraintBottom_toTopOf="@+id/round7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/round"
+        app:layout_constraintVertical_bias="0.933" />
+
+    <TextView
+        android:id="@+id/round7"
+        android:layout_width="359dp"
+        android:layout_height="87dp"
+        android:background="@drawable/round_backround"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.519"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/round"
+        app:layout_constraintVertical_bias="0.909" />
+
+    <ImageView
+        android:id="@+id/rideView"
+        android:layout_width="47dp"
+        android:layout_height="44dp"
+        android:src="@drawable/ride"
+        app:layout_constraintBottom_toBottomOf="@+id/round"
+        app:layout_constraintEnd_toEndOf="@+id/round"
+        app:layout_constraintHorizontal_bias="0.086"
+        app:layout_constraintStart_toStartOf="@+id/round"
+        app:layout_constraintTop_toTopOf="@+id/round"
+        app:layout_constraintVertical_bias="0.581" />
+
+    <ImageView
+        android:id="@+id/cookView"
+        android:layout_width="49dp"
+        android:layout_height="45dp"
+        android:src="@drawable/cook"
+        app:layout_constraintBottom_toBottomOf="@+id/round4"
+        app:layout_constraintEnd_toEndOf="@+id/round4"
+        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintStart_toStartOf="@+id/round4"
+        app:layout_constraintTop_toTopOf="@+id/round4"
+        app:layout_constraintVertical_bias="0.523" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="46dp"
+        android:layout_height="47dp"
+        android:src="@drawable/play"
+        app:layout_constraintBottom_toBottomOf="@+id/round5"
+        app:layout_constraintEnd_toEndOf="@+id/round5"
+        app:layout_constraintHorizontal_bias="0.089"
+        app:layout_constraintStart_toStartOf="@+id/round5"
+        app:layout_constraintTop_toTopOf="@+id/round5"
+        app:layout_constraintVertical_bias="0.55" />
+
+    <ImageView
+        android:id="@+id/tvView"
+        android:layout_width="45dp"
+        android:layout_height="48dp"
+        android:src="@drawable/tv"
+        app:layout_constraintBottom_toBottomOf="@+id/round6"
+        app:layout_constraintEnd_toEndOf="@+id/round6"
+        app:layout_constraintHorizontal_bias="0.101"
+        app:layout_constraintStart_toStartOf="@+id/round6"
+        app:layout_constraintTop_toTopOf="@+id/round6"
+        app:layout_constraintVertical_bias="0.564" />
+
+    <ImageView
+        android:id="@+id/walkView"
+        android:layout_width="45dp"
+        android:layout_height="50dp"
+        android:src="@drawable/walk"
+        app:layout_constraintBottom_toBottomOf="@+id/round7"
+        app:layout_constraintEnd_toEndOf="@+id/round7"
+        app:layout_constraintHorizontal_bias="0.17"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/round7"
+        app:layout_constraintVertical_bias="0.594" />
+
+    <TextView
+        android:id="@+id/rideTextLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go out for a ride"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/round"
+        app:layout_constraintEnd_toEndOf="@+id/round"
+        app:layout_constraintStart_toStartOf="@+id/round"
+        app:layout_constraintTop_toTopOf="@+id/round" />
+
+    <TextView
+        android:id="@+id/cookTextLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Learn how to cook"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/round4"
+        app:layout_constraintEnd_toEndOf="@+id/round4"
+        app:layout_constraintHorizontal_bias="0.577"
+        app:layout_constraintStart_toStartOf="@+id/round4"
+        app:layout_constraintTop_toTopOf="@+id/round4"
+        app:layout_constraintVertical_bias="0.4" />
+
+    <TextView
+        android:id="@+id/playTextLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play a game or sport"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/round5"
+        app:layout_constraintEnd_toEndOf="@+id/round5"
+        app:layout_constraintStart_toStartOf="@+id/imageView5"
+        app:layout_constraintTop_toTopOf="@+id/round5" />
+
+    <TextView
+        android:id="@+id/tvTextLabel"
+        android:layout_width="240dp"
+        android:layout_height="58dp"
+        android:text="Watch your favourte show"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/round6"
+        app:layout_constraintEnd_toEndOf="@+id/round6"
+        app:layout_constraintHorizontal_bias="0.677"
+        app:layout_constraintStart_toStartOf="@+id/tvView"
+        app:layout_constraintTop_toTopOf="@+id/round6"
+        app:layout_constraintVertical_bias="0.483" />
+
+    <TextView
+        android:id="@+id/walkTextLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Take a walk or stroll"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/round7"
+        app:layout_constraintEnd_toEndOf="@+id/round7"
+        app:layout_constraintStart_toStartOf="@+id/walkView"
+        app:layout_constraintTop_toTopOf="@+id/round7" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Below are some things you should try out based on your results"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/round"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
