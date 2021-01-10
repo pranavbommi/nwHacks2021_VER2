@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".ui.data.GalleryFragment">
 
+    <TextView
+        android:id="@+id/round3"
+        android:layout_width="345dp"
+        android:layout_height="87dp"
+        android:layout_marginTop="84dp"
+        android:background="@drawable/rndcornerwhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/header"
         android:layout_width="415dp"
@@ -42,4 +53,109 @@
             tools:layout_editor_absoluteX="44dp"
             tools:layout_editor_absoluteY="46dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/moodRatingLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Your Mood Rating"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header" />
+
+    <TextView
+        android:id="@+id/feelingGoodLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="360dp"
+        android:text="Feeling Good!"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="203dp"
+        android:layout_height="367dp"
+        android:src="@drawable/smile2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        app:layout_constraintVertical_bias="0.371" />
+
+    <View
+        android:id="@+id/leftrectangleView"
+        android:layout_width="321dp"
+        android:layout_height="7dp"
+        android:layout_marginEnd="168dp"
+        android:layout_marginRight="168dp"
+        android:background="@color/teal_200"
+        android:rotation="90"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/round3"
+        app:layout_constraintVertical_bias="0.266" />
+
+    <View
+        android:id="@+id/rightrectangleView2"
+        android:layout_width="321dp"
+        android:layout_height="7dp"
+        android:layout_marginStart="172dp"
+        android:layout_marginLeft="172dp"
+        android:background="@color/teal_200"
+        android:rotation="90"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/round3"
+        app:layout_constraintVertical_bias="0.375" />
+
+    <View
+        android:id="@+id/bottomRectangleView"
+        android:layout_width="334dp"
+        android:layout_height="9dp"
+        android:layout_marginBottom="156dp"
+        android:background="@color/teal_200"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/scoreTextLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Score:"
+        android:textColor="@color/black"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.369"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/scoreLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="11"
+        android:textColor="@color/black"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.195"
+        app:layout_constraintStart_toEndOf="@+id/scoreTextLabel" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
